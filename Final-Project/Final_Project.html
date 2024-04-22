@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+        }
+        /*ПЕРШИЙ ВАРІАНТ*/
+        .background-section {
+            width: 100%;
+            height: 95vh;
+            display: flex;
+            position: relative;
+        }
+        .background-section>.black {
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(90deg, #000 -0.86%, #000 10.37%, #000 19.49%, #000 28.74%, #000 37.18%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .background-section>.main-image {
+            width: 60%;
+            height: 100%;
+            background-image: url(main-image.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .red {
+            color: #FF4B32;
+            opacity: unset;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 40px;
+        }
+        nav>img {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px 9px 0;
+        }
+        nav>a {
+            text-decoration: none;
+            color: #FFF;
+            font-family: "Open Sans", sans-serif;
+            font-size: 18px;
+            opacity: 0.6;
+            margin-right: 50px;
+        }
+        .active {
+            opacity: 0.9;
+        }
+        .JosefinSans-700 {
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: 700;
+        }
+        .JosefinSans-500 {
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: 500;
+        }
+        .JosefinSans-600 {
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: 600;
+        }
+        .JosefinSans-700 {
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: 700;
+        }
+        .OpenSans-700 {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 700;
+        }
+        .OpenSans-400 {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+        }
+        .OpenSans-600 {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600;
+        }
+        .margin-0 {
+            margin: 0;
+        }
+        .background-section>div>section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            max-width: 35%;
+            position: absolute;
+            /*top: 150px;*/
+            left: 195px;
+        }
+        .background-section>div>section>h1 {
+            color: #FFF;
+            font-size: 58px;
+            line-height: 120%;
+        }
+        .background-section>div>section>p {
+            color: #FFF;
+            font-size: 20px;
+            line-height: 160%;
+            opacity: 0.8;
+            margin: 30px 0 50px 0;
+        }
+        .background-section>div>section>button {
+            padding: 16px 35px;
+            border: none;
+            border-radius: 5px;
+            background: #FF4B32;
+            color: #FFF;
+            font-family: "Open Sans", sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 160%; /* 28.8px */
+        }
+        /**/
+
+
+        /*ДРУГИЙ ВАРІАНТ*/
+        /*.background-section {*/
+        /*    width: 100%;*/
+        /*    height: 90vh;*/
+        /*    display: flex;*/
+        /*    position: relative;*/
+        /*}*/
+        /*.background-section>.black {*/
+        /*    width: 40%;*/
+        /*    height: 100%;*/
+        /*    background: linear-gradient(90deg, #000 -0.86%, #000 10.37%, #000 19.49%, #000 28.74%, #000 37.18%);*/
+        /*    position: relative;*/
+        /*}*/
+        /*.background-section>.main-image {*/
+        /*    width: 60%;*/
+        /*    height: 100%;*/
+        /*    background-image: url(main-image.jpg);*/
+        /*    background-position: center;*/
+        /*    background-size: cover;*/
+        /*}*/
+        /*.red {*/
+        /*    color: #FF4B32;*/
+        /*    opacity: unset;*/
+        /*}*/
+        /*nav {*/
+        /*    width: 100%;*/
+        /*    display: flex;*/
+        /*    align-items: center;*/
+        /*    justify-content: center;*/
+        /*    margin-top: 40px;*/
+        /*    position: absolute;*/
+        /*    !*right: 380px;*!*/
+        /*}*/
+        /*nav>img {*/
+        /*    width: 50px;*/
+        /*    height: 50px;*/
+        /*    margin: 0 10px 9px 0;*/
+        /*}*/
+        /*nav>a {*/
+        /*    text-decoration: none;*/
+        /*    color: #FFF;*/
+        /*    font-family: "Open Sans", sans-serif;*/
+        /*    font-size: 18px;*/
+        /*    opacity: 0.6;*/
+        /*    margin-right: 50px;*/
+        /*}*/
+        /*.active {*/
+        /*    opacity: 0.9;*/
+        /*}*/
+        /*.JosefinSans-700 {*/
+        /*    font-family: "Josefin Sans", sans-serif;*/
+        /*    font-weight: 700;*/
+        /*}*/
+        /*.JosefinSans-500 {*/
+        /*    font-family: "Josefin Sans", sans-serif;*/
+        /*    font-weight: 500;*/
+        /*}*/
+        /*.JosefinSans-600 {*/
+        /*    font-family: "Josefin Sans", sans-serif;*/
+        /*    font-weight: 600;*/
+        /*}*/
+        /*.JosefinSans-700 {*/
+        /*    font-family: "Josefin Sans", sans-serif;*/
+        /*    font-weight: 700;*/
+        /*}*/
+        /*.OpenSans-700 {*/
+        /*    font-family: "Open Sans", sans-serif;*/
+        /*    font-weight: 700;*/
+        /*}*/
+        /*.OpenSans-400 {*/
+        /*    font-family: "Open Sans", sans-serif;*/
+        /*    font-weight: 400;*/
+        /*}*/
+        /*.OpenSans-600 {*/
+        /*    font-family: "Open Sans", sans-serif;*/
+        /*    font-weight: 600;*/
+        /*}*/
+        /*.margin-0 {*/
+        /*    margin: 0;*/
+        /*}*/
+        /*.background-section>section {*/
+        /*    display: flex;*/
+        /*    justify-content: space-between;*/
+        /*    align-items: flex-start;*/
+        /*    flex-direction: column;*/
+        /*    max-width: 35%;*/
+        /*    !*max-height: 50%;*!*/
+        /*    !*margin-top: 200px;*!*/
+        /*    position: absolute;*/
+        /*    top: 150px;*/
+        /*    left: 195px;*/
+        /*}*/
+        /*.background-section>section>h1 {*/
+        /*    color: #FFF;*/
+        /*    font-size: 58px;*/
+        /*    line-height: 120%;*/
+        /*}*/
+        /*.background-section>section>p {*/
+        /*    color: #FFF;*/
+        /*    font-size: 20px;*/
+        /*    line-height: 160%;*/
+        /*    opacity: 0.8;*/
+        /*    margin: 30px 0 50px 0;*/
+        /*}*/
+        /*.background-section>section>button {*/
+        /*    padding: 16px 35px;*/
+        /*    border: none;*/
+        /*    border-radius: 5px;*/
+        /*    background: #FF4B32;*/
+        /*    color: #FFF;*/
+        /*    font-family: "Open Sans", sans-serif;*/
+        /*    font-size: 18px;*/
+        /*    font-weight: 600;*/
+        /*    line-height: 160%; !* 28.8px *!*/
+        /*}*/
+        /*****************************/
+
+
+        /*НЕ ЧІПАТИ*/
+        /**********************************************section**************************************************/
+        /*.background-section>.black>section {*/
+        /*    display: flex;*/
+        /*    justify-content: space-between;*/
+        /*    align-items: flex-start;*/
+        /*    flex-direction: column;*/
+        /*    width: 80%;*/
+        /*    margin-top: 200px;*/
+        /*    position: absolute;*/
+        /*    left: 220px;*/
+        /*}*/
+        /*.background-section>.black>section>h1 {*/
+        /*    color: #FFF;*/
+        /*    font-size: 58px;*/
+        /*    line-height: 120%;*/
+        /*}*/
+        /*.background-section>.black>section>p {*/
+        /*    color: #FFF;*/
+        /*    font-size: 20px;*/
+        /*    line-height: 160%;*/
+        /*    opacity: 0.8;*/
+        /*    margin: 30px 0 50px 0;*/
+        /*}*/
+        /*.background-section>.black>section>button {*/
+        /*    padding: 16px 35px;*/
+        /*    border: none;*/
+        /*    border-radius: 5px;*/
+        /*    background: #FF4B32;*/
+        /*    color: #FFF;*/
+        /*    font-family: "Open Sans", sans-serif;*/
+        /*    font-size: 18px;*/
+        /*    font-weight: 600;*/
+        /*    line-height: 160%; !* 28.8px *!*/
+        /*} */
+        /*****************************************************************************************************/
+
+
+        section.best-offer-section {
+            /*height: 100vh;*/
+            padding: 0 70px 0 145px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 220px;
+        }
+        .best-offer-section>h2 {
+            margin: 140px 0 20px 0;
+            font-size: 43px;
+            line-height: 130%;
+            letter-spacing: 6.45px;
+        }
+        .best-offer-section>p {
+            width: 40%;
+            color: #000;
+            font-size: 18px;
+            line-height: 160%;
+            opacity: 0.7;
+        }
+        .best-offer-section>article {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+        }
+        .best-offer-section>article>div {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        .best-offer-section>article>div>img {
+            width: 280px;
+            margin-bottom: 35px;
+        }
+        .best-offer-section>article>div>span {
+            color: #0C0D0C;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 150%;
+        }
+        .best-offer-section>article>div>h2 {
+            color: #000;
+            font-size: 32px;
+            line-height: 130%;
+            margin: 10px 0 15px 0;
+        }
+        .best-offer-section>article>div>p {
+            color: #000;
+            font-size: 16px;
+            line-height: 160%;
+            opacity: 0.6;
+            width: 60%;
+        }
+
+
+
+        section.our-gallery {
+            /*height: 100vh;*/
+            /*padding: 0 70px 0 145px;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 140px;
+        }
+        section.our-gallery>h2 {
+            text-align: center;
+            font-size: 43px;
+            line-height: 130%;
+        }
+        section.our-gallery>p {
+            text-align: center;
+            font-size: 18px;
+            line-height: 160%;
+            opacity: 0.7;
+            width: 45%;
+            margin: 20px 0 60px 0;
+        }
+        section.our-gallery>div.image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 30px;
+            column-gap: 30px;
+        }
+        section.our-gallery>span {
+            color: #FF4B32;
+            font-size: 18px;
+            line-height: 150%;
+            margin-top: 75px;
+        }
+        
+
+
+        section.contact-information {
+            background-image: url(coffee-background.png);
+            height: 80vh;
+            background-size: cover;
+            margin-bottom: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        section.contact-information>h3 {
+            color: #FF4B32;
+            font-size: 24px;
+            line-height: 150%;
+            margin-bottom: 60px;
+        }
+        section.contact-information>h2 {
+            color: #FFF;
+            font-size: 43px;
+            line-height: 130%;
+        }
+        section.contact-information>div.logo-contact {
+            margin: 60px 0 25px 0;
+            position: relative;
+        }
+        section.contact-information>div.logo-contact>img {
+            position: absolute;
+            bottom: 7px;
+        }
+        section.contact-information>div.logo-contact>span {
+            color: #FFF;
+            font-size: 24px;
+            line-height: 150%;
+            margin-left: 35px;
+        }
+        section.contact-information>div.social-media{
+            width: 25%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+        section.news-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 140px;
+        }
+        section.news-section>h2 {
+            font-size: 43px;
+            line-height: 130%;
+        }
+        section.news-section>p {
+            font-size: 18px;
+            line-height: 160%;
+            opacity: 0.7;
+            width: 40%;
+            text-align: center;
+            margin: 20px 0 60px 0;
+        }
+        section.news-section>div.articles-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           column-gap: 30px;
+        }
+        section.news-section>div.articles-container>article {
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            background: #FFF;
+            box-shadow: 40px 15px 136px 0px rgba(0, 0, 0, 0.20);
+            width: 25%;
+        }
+        section.news-section>div.articles-container>article>div.text-container {
+            margin: 30px 0 30px 30px;
+        }
+        section.news-section>div.articles-container>article>div.text-container>h2 {
+            color: #000;
+            font-size: 32px;
+            line-height: 130%;
+        }
+        section.news-section>div.articles-container>article>div.text-container>p {
+            line-height: 160%;
+            opacity: 0.7;
+            width: 58%;
+        }
+        section.news-section>div.articles-container>article>div.text-container>span {
+            color: #FF4B32;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 160%;
+        }
+
+
+
+
+
+
+        footer {
+            background-image: url(footer.png);
+            background-size: cover;
+            height: 45vh;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+        footer p, span, a {
+            color: #FFF;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 150%;
+        }
+        footer h2 {
+            color: #FFF;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 150%;
+        }
+        footer>div.footer-container-1, div.footer-container-2, div.footer-container-3 {
+            display: flex;
+            flex-direction: column;
+        }
+        footer>div.footer-container-1 {
+            width: 20%;
+            margin-right: 45px;
+        }
+        footer>div.footer-container-2, div.footer-container-3 {
+            row-gap: 20px;
+        }
+        footer>div.footer-container-3 {
+            margin: 15px 130px 0 130px;
+        }
+        footer>div.footer-container-2, div.footer-container-4 {
+            margin-top: 15px;
+        }
+        div.footer-container-1>div.coffee-logo,div.logo-contact {
+            display: flex;
+            align-items: flex-end;
+        }
+        div.coffee-logo>span {
+            color: #FF4B32;
+            font-size: 24px;
+            line-height: 130%;
+            margin: 0 0 5px 5px;
+        }
+        div.footer-container-1>p {
+            margin: 30px 0 30px 0;
+        }
+        div.logo-contact>img {
+            margin: 0 10px 3px 0;
+        }
+    </style>
+</head>
+<body>
+<!--ПЕРШИЙ ВАРІАНТ -->
+    <main class="background-section">
+        <div class="black">
+            <section>
+                <h1 class="JosefinSans-500 margin-0">Keep your dreams aroused with a cup of coffee.</h1>
+                <p class="OpenSans-600">The coffee ideas shared by these generators are not cool at all, as they are not a human being.</p>
+                <button>Buy Now</button>
+            </section>
+        </div>
+        <div class="main-image">
+            <nav>
+                <img src="coffee-cup.png">
+                <a class="red JosefinSans-700" style="font-size: 24px">Coffee</a>
+                <a class="red OpenSans-700" style="font-size: 18px">Home</a>
+                <a>About Us</a>
+                <a class="active" style="margin-right: 30px">Menu</a>
+                <a>Review</a>
+                <a>Contact</a>
+            </nav>
+        </div>
+    </main>
+
+<!--    ДРУГИЙ ВАРІАНТ -->
+<!--    <main class="background-section">-->
+<!--        <div class="black">-->
+<!--            &lt;!&ndash;            <section>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <h1 class="JosefinSans-500 margin-0">Keep your dreams aroused with a cup of coffee.</h1>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <p class="OpenSans-600">The coffee ideas shared by these generators are not cool at all, as they are not a human being.</p>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <button>Buy Now</button>&ndash;&gt;-->
+<!--            &lt;!&ndash;            </section>&ndash;&gt;-->
+<!--        </div>-->
+<!--        <div class="main-image">-->
+<!--            &lt;!&ndash;            <nav>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <img src="coffee-cup.png">&ndash;&gt;-->
+<!--            &lt;!&ndash;                <a class="red JosefinSans-700" style="font-size: 24px">Coffee</a>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <a class="red OpenSans-700" style="font-size: 18px">Home</a>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <a>About Us</a>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <a class="active" style="margin-right: 30px">Menu</a>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <a>Review</a>&ndash;&gt;-->
+<!--            &lt;!&ndash;                <a>Contact</a>&ndash;&gt;-->
+<!--            &lt;!&ndash;            </nav>&ndash;&gt;-->
+<!--        </div>-->
+<!--        <nav>-->
+<!--            <img src="coffee-cup.png">-->
+<!--            <a class="red JosefinSans-700" style="font-size: 24px">Coffee</a>-->
+<!--            <a class="red OpenSans-700" style="font-size: 18px">Home</a>-->
+<!--            <a>About Us</a>-->
+<!--            <a class="active" style="margin-right: 30px">Menu</a>-->
+<!--            <a>Review</a>-->
+<!--            <a>Contact</a>-->
+<!--        </nav>-->
+<!--        <section>-->
+<!--            <h1 class="JosefinSans-500 margin-0">Keep your dreams aroused with a cup of coffee.</h1>-->
+<!--            <p class="OpenSans-600">The coffee ideas shared by these generators are not cool at all, as they are not a human being.</p>-->
+<!--            <button>Buy Now</button>-->
+<!--        </section>-->
+<!--    </main>-->
+<!--    -->
+
+    <section class="best-offer-section">
+        <h2 class="JosefinSans-600">That is Our Best Offer</h2>
+        <p class="OpenSans-400 margin-0">A coffee shop will help you to tell the audience what your business.</p>
+        <article>
+            <div class="brazilian-coffee-beans">
+                <img src="brazilian-coffee-beans.png">
+                <span class="JosefinSans-700 margin-0">$ 5.99</span>
+                <h2 class="JosefinSans-600">Brazilian coffe beans</h2>
+                <p class="OpenSans-400 margin-0">Coffee that’s always you handle your own the way you like.</p>
+            </div>
+            <div class="vietnam-coffee-beans">
+                <img src="vietnam-coffee-beans.png">
+                <span class="JosefinSans-700 margin-0">$ 4.99</span>
+                <h2 class="JosefinSans-600">Vietnam coffe beans</h2>
+                <p class="OpenSans-400 margin-0">Coffee that’s always you handle your own the way you like.</p>
+            </div>
+            <div class="indonesian-coffee-beans">
+                <img src="indonesian-coffee-beans.png" style="margin-bottom: 55px">
+                <span class="JosefinSans-700 margin-0">$ 3.99</span>
+                <h2 class="JosefinSans-600">Indonesian coffe beans</h2>
+                <p class="OpenSans-400 margin-0">Coffee that’s always you handle your own the way you like.</p>
+            </div>
+        </article>
+    </section>
+
+    <section class="our-gallery">
+        <h2 class="JosefinSans-600 margin-0">Our Gallery</h2>
+        <p class="OpenSans-400">The coffee shop name generator is a great tool for those that are deliberating what to call their new coffee.</p>
+        <div class="image-container">
+            <img src="coffee-1.png">
+            <img src="coffee-2.png">
+            <img src="coffee-3.png">
+            <img src="coffee-4.png">
+            <img src="coffee-5.png">
+            <img src="coffee-6.png">
+        </div>
+        <span class="OpenSans-400">LOAD MORE</span>
+    </section>
+
+    <section class="contact-information">
+        <h3 class="OpenSans-600">Follow US</h3>
+        <h2 class="JosefinSans-600 margin-0">Have an inquiry?</h2>
+        <h2 class="JosefinSans-600 margin-0">Text or call and ask Something.</h2>
+        <div class="logo-contact">
+            <img src="telephone.svg">
+            <span class="OpenSans-400">+8801742-527137</span>
+        </div>
+        <div class="logo-contact" style="margin-top: 0">
+            <img src="email.svg">
+            <span class="OpenSans-400">mdmaksedur17@gmail.com</span>
+        </div>
+        <div class="social-media">
+            <img src="twitter.svg">
+            <img src="facebook.svg">
+            <img src="instagram.svg">
+            <img src="linkedin.svg">
+        </div>
+    </section>
+
+    <section class="news-section">
+        <h2 class="JosefinSans-600 margin-0">Update News</h2>
+        <p class="OpenSans-400">A cup of brewed coffee represents a contribution of up to 1.8 grams of fiber of the recommended.</p>
+        <div class="articles-container">
+            <article>
+                <img src="coffee-beans-1.png">
+                <div class="text-container">
+                    <h2 class="JosefinSans-600 margin-0">Coffee beans</h2>
+                    <p class="OpenSans-400">These advertising mottos are targeted to the 56% of coffee drinking consumers.</p>
+                    <span class="OpenSans-600">Learn More</span>
+                </div>
+            </article>
+            <article>
+                <img src="coffee-beans-2.png">
+                <div class="text-container">
+                    <h2 class="JosefinSans-600 margin-0">Coffee beans</h2>
+                    <p class="OpenSans-400">These advertising mottos are targeted to the 56% of coffee drinking consumers.</p>
+                    <span class="OpenSans-600">Learn More</span>
+                </div>
+            </article>
+            <article>
+                <img src="coffee-beans-3.png">
+                <div class="text-container">
+                    <h2 class="JosefinSans-600 margin-0">Coffee beans</h2>
+                    <p class="OpenSans-400">These advertising mottos are targeted to the 56% of coffee drinking consumers.</p>
+                    <span class="OpenSans-600">Learn More</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="OpenSans-400">
+
+        <div class="footer-container-1">
+            <div class="coffee-logo">
+                <img src="coffee-cup.png">
+                <span class="JosefinSans-700">Coffee</span>
+            </div>
+            <p>Creating a catchy tagline coffee shop business growth.</p>
+            <div class="logo-contact">
+                <img src="telephone.svg">
+                <span>+8801742-527137</span>
+            </div>
+        </div>
+
+        <div class="footer-container-2">
+            <h2 class="margin-0">CATEGORIES</h2>
+            <a>Ashley Szekeres Art</a>
+            <a>Merchandise</a>
+            <a>Gift Certificates</a>
+        </div>
+
+        <div class="footer-container-3">
+            <h2 class="margin-0">INFORMATION</h2>
+            <a>Coffee Beans</a>
+            <a>Contact Us</a>
+            <a>Blog</a>
+        </div>
+
+        <div class="footer-container-4">
+            <h2 class="margin-0">FOLLOW US</h2>
+            <img src="social-media.svg" style="margin-top: 40px">
+        </div>
+        <p>Copyright © 2021 Coffee, All rights reserved. Present by MoxCreative.</p>
+    </footer>
+</body>
+</html>
