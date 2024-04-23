@@ -1,6 +1,42 @@
 body {
     margin: 0;
 }
+.active {
+    opacity: 0.9;
+}
+.JosefinSans-700 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+}
+.JosefinSans-500 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 500;
+}
+.JosefinSans-600 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+}
+.JosefinSans-700 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+}
+.OpenSans-700 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+}
+.OpenSans-400 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+.OpenSans-600 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+.margin-0 {
+    margin: 0;
+}
+
+/************************************************MAIN-NAV***************************************************/
 .background-section {
     width: 100%;
     height: 95vh;
@@ -46,40 +82,6 @@ nav>a {
     opacity: 0.6;
     margin-right: 50px;
 }
-.active {
-    opacity: 0.9;
-}
-.JosefinSans-700 {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 700;
-}
-.JosefinSans-500 {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 500;
-}
-.JosefinSans-600 {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 600;
-}
-.JosefinSans-700 {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 700;
-}
-.OpenSans-700 {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-}
-.OpenSans-400 {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-}
-.OpenSans-600 {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-}
-.margin-0 {
-    margin: 0;
-}
 .background-section>div>section {
     display: flex;
     justify-content: space-between;
@@ -111,10 +113,14 @@ nav>a {
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     font-weight: 600;
-    line-height: 160%; /* 28.8px */
+    line-height: 160%;
+    transition: 1s;
 }
-
-
+.background-section>div>section>button:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+/**************************************BEST-OFFER-SECTION******************************************************/
 section.best-offer-section {
     /*height: 100vh;*/
     padding: 0 70px 0 145px;
@@ -171,8 +177,7 @@ section.best-offer-section {
     width: 60%;
 }
 
-
-
+/*****************************************GALLERY-SECTION******************************************************/
 section.our-gallery {
     /*height: 100vh;*/
     /*padding: 0 70px 0 145px;*/
@@ -202,15 +207,17 @@ section.our-gallery>div.image-container {
     row-gap: 30px;
     column-gap: 30px;
 }
+section.our-gallery>div.image-container>img:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
 section.our-gallery>span {
-    color: #FF4B32;
     font-size: 18px;
     line-height: 150%;
     margin-top: 75px;
 }
 
-
-
+/**************************************CONTACT-INFORMATION-SECTION**********************************************/
 section.contact-information {
     background-image: url(coffee-background.png);
     height: 80vh;
@@ -222,7 +229,6 @@ section.contact-information {
     flex-direction: column;
 }
 section.contact-information>h3 {
-    color: #FF4B32;
     font-size: 24px;
     line-height: 150%;
     margin-bottom: 60px;
@@ -252,8 +258,7 @@ section.contact-information>div.social-media{
     justify-content: space-between;
 }
 
-
-
+/*********************************************NEWS-SECTION*****************************************************/
 section.news-section {
     display: flex;
     justify-content: center;
@@ -279,48 +284,53 @@ section.news-section>div.articles-container {
     align-items: center;
     column-gap: 30px;
 }
-section.news-section>div.articles-container>article {
+div.articles-container>article {
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     background: #FFF;
-    box-shadow: 40px 15px 136px 0px rgba(0, 0, 0, 0.20);
+    box-shadow: 40px 15px 136px 0 rgba(0, 0, 0, 0.20);
     width: 25%;
+    transition: 1s;
 }
-section.news-section>div.articles-container>article>div.text-container {
+div.articles-container>article:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+article>div.text-container {
     margin: 30px 0 30px 30px;
 }
-section.news-section>div.articles-container>article>div.text-container>h2 {
+article>div.text-container>h2 {
     color: #000;
     font-size: 32px;
     line-height: 130%;
 }
-section.news-section>div.articles-container>article>div.text-container>p {
+article>div.text-container>p {
     line-height: 160%;
     opacity: 0.7;
     width: 58%;
 }
-section.news-section>div.articles-container>article>div.text-container>span {
-    color: #FF4B32;
+article>div.text-container>span {
     font-size: 16px;
     font-weight: 600;
     line-height: 160%;
 }
 
-
-
-
-
-
+/************************************************FOOTER********************************************************/
 footer {
     background-image: url(footer.png);
     background-size: cover;
     height: 45vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     padding-top: 50px;
 }
-footer p, span, a {
+footer>div.footer-container-main {
+    display: flex;
+    justify-content: center;
+}
+footer>div.footer-container-main p, span, a {
     color: #FFF;
     font-size: 18px;
     font-weight: 400;
@@ -332,21 +342,21 @@ footer h2 {
     font-weight: 400;
     line-height: 150%;
 }
-footer>div.footer-container-1, div.footer-container-2, div.footer-container-3 {
+div.footer-container-1, div.footer-container-2, div.footer-container-3 {
     display: flex;
     flex-direction: column;
 }
-footer>div.footer-container-1 {
+div.footer-container-1 {
     width: 20%;
     margin-right: 45px;
 }
-footer>div.footer-container-2, div.footer-container-3 {
+div.footer-container-2, div.footer-container-3 {
     row-gap: 20px;
 }
-footer>div.footer-container-3 {
+div.footer-container-3 {
     margin: 15px 130px 0 130px;
 }
-footer>div.footer-container-2, div.footer-container-4 {
+div.footer-container-2, div.footer-container-4 {
     margin-top: 15px;
 }
 div.footer-container-1>div.coffee-logo,div.logo-contact {
@@ -354,7 +364,6 @@ div.footer-container-1>div.coffee-logo,div.logo-contact {
     align-items: flex-end;
 }
 div.coffee-logo>span {
-    color: #FF4B32;
     font-size: 24px;
     line-height: 130%;
     margin: 0 0 5px 5px;
@@ -364,4 +373,11 @@ div.footer-container-1>p {
 }
 div.logo-contact>img {
     margin: 0 10px 3px 0;
+}
+footer>p {
+    color: #FFF;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    line-height: 160%;
+    margin-top: 70px;
 }
