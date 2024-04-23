@@ -81,6 +81,7 @@ nav>a {
     font-size: 18px;
     opacity: 0.6;
     margin-right: 50px;
+    cursor: pointer;
 }
 .background-section>div>section {
     display: flex;
@@ -115,6 +116,7 @@ nav>a {
     font-weight: 600;
     line-height: 160%;
     transition: 1s;
+    cursor: pointer;
 }
 .background-section>div>section>button:hover {
     transform: scale(1.2);
@@ -218,6 +220,7 @@ section.our-gallery>span {
     font-size: 18px;
     line-height: 150%;
     margin-top: 75px;
+    cursor: pointer;
 }
 
 /**************************************CONTACT-INFORMATION-SECTION**********************************************/
@@ -317,6 +320,7 @@ article>div.text-container>span {
     font-size: 16px;
     font-weight: 600;
     line-height: 160%;
+    cursor: pointer;
 }
 
 /************************************************FOOTER********************************************************/
@@ -338,6 +342,10 @@ footer>div.footer-container-main p, span, a {
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
+}
+div.footer-container-main a {
+    cursor: pointer;
+    transition: 0.5s;
 }
 div.footer-container-main a:hover {
     color: #FF4B32;
