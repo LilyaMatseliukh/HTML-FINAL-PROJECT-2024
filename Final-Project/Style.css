@@ -207,6 +207,9 @@ section.our-gallery>div.image-container {
     row-gap: 30px;
     column-gap: 30px;
 }
+section.our-gallery>div.image-container>img{
+    transition: 0.5s;
+}
 section.our-gallery>div.image-container>img:hover {
     transform: scale(1.05);
     transition: 0.5s;
@@ -335,6 +338,10 @@ footer>div.footer-container-main p, span, a {
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
+}
+div.footer-container-main a:hover {
+    color: #FF4B32;
+    transition: 0.5s;
 }
 footer h2 {
     color: #FFF;
